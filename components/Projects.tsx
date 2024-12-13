@@ -2,8 +2,8 @@
 
 import React from 'react';
 
+import useSectionInView from '@/hooks/useSectionInView';
 import { projectsData } from '@/lib/data';
-import { useSectionInView } from '@/lib/hooks';
 
 import Project from './Project';
 import SectionHeading from './SectionHeading';
@@ -15,9 +15,15 @@ export default function Projects() {
     <section ref={ref} id="projects" className="scroll-mt-28 mb-28">
       <SectionHeading>My projects</SectionHeading>
       <div>
-        {projectsData.map((project, index) => (
-          <React.Fragment key={index}>
-            <Project {...project} />
+        {projectsData.map((project) => (
+          <React.Fragment key={project.id}>
+            <Project
+              id={project.id}
+              title={project.title}
+              description={project.description}
+              tags={project.tags}
+              imageUrl={project.imageUrl}
+            />
           </React.Fragment>
         ))}
       </div>

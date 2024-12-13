@@ -1,10 +1,12 @@
-import corpcommentImg from '@/public/corpcomment.png';
-import rmtdevImg from '@/public/rmtdev.png';
-import wordanalyticsImg from '@/public/wordanalytics.png';
 import React from 'react';
 import { CgWorkAlt } from 'react-icons/cg';
 import { FaReact } from 'react-icons/fa';
 import { SiNextdotjs } from 'react-icons/si';
+import { v4 as uuid } from 'uuid';
+
+import corpcommentImg from '@/public/corpcomment.png';
+import rmtdevImg from '@/public/rmtdev.png';
+import wordanalyticsImg from '@/public/wordanalytics.png';
 
 export const links = [
   {
@@ -30,6 +32,7 @@ export const links = [
 ] as const;
 
 type Experience = {
+  id: string;
   title: string;
   company: string;
   description: React.ReactNode;
@@ -39,6 +42,7 @@ type Experience = {
 
 export const experiencesData: Experience[] = [
   {
+    id: uuid(),
     title: 'Web Developer Trainee',
     company: 'Innovex Academy, Bhubaneswar, India',
     description: (
@@ -57,6 +61,7 @@ export const experiencesData: Experience[] = [
     date: '2020 - 2021',
   },
   {
+    id: uuid(),
     title: 'Software Developer II',
     company: 'SearchingYard Software Pvt. Ltd., Bhubaneswar, India',
     description: (
@@ -89,6 +94,7 @@ export const experiencesData: Experience[] = [
     date: '2021 - 2024',
   },
   {
+    id: uuid(),
     title: 'Next.js Developer',
     company: 'AIS Technolabs Pvt Ltd, Ahemadabad, India',
     description: (
@@ -122,6 +128,7 @@ export const experiencesData: Experience[] = [
 
 export const projectsData = [
   {
+    id: uuid(),
     title: 'CorpComment',
     description:
       'I worked as a full-stack developer on this startup project for 2 years. Users can give public feedback to companies.',
@@ -129,6 +136,7 @@ export const projectsData = [
     imageUrl: corpcommentImg,
   },
   {
+    id: uuid(),
     title: 'rmtDev',
     description:
       'Job board for remote developer jobs. I was the front-end developer. It has features like filtering, sorting and pagination.',
@@ -136,13 +144,14 @@ export const projectsData = [
     imageUrl: rmtdevImg,
   },
   {
+    id: uuid(),
     title: 'Word Analytics',
     description:
       'A public web app for quick analytics on text. It shows word count, character count and social media post limits.',
     tags: ['React', 'Next.js', 'SQL', 'Tailwind', 'Framer'],
     imageUrl: wordanalyticsImg,
   },
-] as const;
+];
 
 export const skillsData = [
   'HTML',
@@ -156,15 +165,7 @@ export const skillsData = [
   'Tailwind',
   'Bootstrap',
   'Material UI',
-  'Rest API',
-  'Prisma',
-  'MongoDB',
   'Redux',
-  'GraphQL',
   'Express',
-  'PostgreSQL',
   'Firebase',
-  'Appwrite',
-  'Framer Motion',
-  'Context API',
 ] as const;

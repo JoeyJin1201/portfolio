@@ -3,7 +3,7 @@
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 
-import { useSectionInView } from '@/lib/hooks';
+import useSectionInView from '@/hooks/useSectionInView';
 
 export default function Intro() {
   const { ref } = useSectionInView('Home', 0.5);

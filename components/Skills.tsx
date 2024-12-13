@@ -1,9 +1,11 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import { v4 as uuid } from 'uuid';
+
+import useSectionInView from '@/hooks/useSectionInView';
 
 import { skillsData } from '@/lib/data';
-import { useSectionInView } from '@/lib/hooks';
 
 import SectionHeading from './SectionHeading';
 
@@ -34,7 +36,7 @@ export default function Skills() {
       <ul className="flex flex-wrap justify-center gap-2 text-lg text-gray-800">
         {skillsData.map((skill, index) => (
           <motion.li
-            key={index}
+            key={uuid()}
             variants={fadeInAnimationVariants}
             initial="initial"
             whileInView="animate"
