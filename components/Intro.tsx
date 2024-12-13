@@ -1,13 +1,12 @@
 'use client';
 
-import { useActiveSectionContext } from '@/context/ActiveSectionContext';
-import { useSectionInView } from '@/lib/hooks';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 
+import { useSectionInView } from '@/lib/hooks';
+
 export default function Intro() {
   const { ref } = useSectionInView('Home', 0.5);
-  const { setActiveSection, setTimeOfLastClick } = useActiveSectionContext();
 
   return (
     <section
@@ -28,27 +27,13 @@ export default function Intro() {
             <Image
               src="/joey.jpeg"
               alt="Joey portrait"
-              width="192"
-              height="192"
+              width="256"
+              height="256"
               quality="95"
               priority
-              className="h-24 w-24 rounded-full object-cover border-[0.35rem] border-white shadow-xl"
+              className="h-48 w-48 rounded-full object-cover border-[0.25rem] border-white shadow-xl"
             />
           </motion.div>
-
-          <motion.span
-            className="absolute bottom-0 right-0 text-4xl"
-            initial={{ opacity: 0, scale: 0 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{
-              type: 'spring',
-              stiffness: 125,
-              delay: 0.1,
-              duration: 0.7,
-            }}
-          >
-            👋
-          </motion.span>
         </div>
       </div>
 

@@ -1,7 +1,7 @@
 /* eslint-disable no-underscore-dangle */
-import { dirname } from "path";
-import { fileURLToPath } from "url";
-import { FlatCompat } from "@eslint/eslintrc";
+import { FlatCompat } from '@eslint/eslintrc';
+import { dirname } from 'path';
+import { fileURLToPath } from 'url';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
@@ -12,24 +12,26 @@ const compat = new FlatCompat({
 
 const eslintConfig = [
   ...compat.config({
-    extends: ["next/core-web-vitals", "next/typescript", "airbnb", "prettier"],
+    extends: ['next/core-web-vitals', 'next/typescript', 'airbnb', 'prettier'],
     rules: {
-      "import/extensions": [
-        "error",
-        "ignorePackages",
+      'import/extensions': [
+        'error',
+        'ignorePackages',
         {
-          "js": "never",
-          "jsx": "never",
-          "ts": "never",
-          "tsx": "never"
-        }
+          js: 'never',
+          jsx: 'never',
+          ts: 'never',
+          tsx: 'never',
+        },
       ],
-      "react/jsx-filename-extension": [
-        "error",
-        { "extensions": [".jsx", ".tsx"] }
+
+      'react/jsx-filename-extension': [
+        'error',
+        { extensions: ['.jsx', '.tsx'] },
       ],
-      "react/react-in-jsx-scope": "off"
-    }
+      'react/no-unescaped-entities': 'off',
+      'react/react-in-jsx-scope': 'off',
+    },
   }),
 ];
 

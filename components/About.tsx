@@ -1,7 +1,9 @@
 'use client';
 
-import { useSectionInView } from '@/lib/hooks';
 import { motion } from 'framer-motion';
+
+import { useSectionInView } from '@/lib/hooks';
+
 import SectionHeading from './SectionHeading';
 
 export default function About() {
