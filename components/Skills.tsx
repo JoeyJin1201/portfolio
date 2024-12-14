@@ -43,8 +43,14 @@ export default function Skills() {
               once: true,
             }}
             custom={index}
-            className="bg-white borderBlack rounded-xl px-5 py-3 dark:bg-white/10 dark:text-white/80 flex gap-x-4 justify-center items-center"
+            className="bg-white borderBlack rounded-xl px-3 py-3 dark:bg-white/10 dark:text-white/80 flex gap-x-4 justify-center items-center"
           >
+            <img
+              src={`https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons${skill.image}`}
+              alt=""
+              width={32}
+              height={32}
+            />
             {skill.name}
           </motion.li>
         ))}
