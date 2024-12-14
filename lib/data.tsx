@@ -8,28 +8,7 @@ import corpcommentImg from '@/public/corpcomment.png';
 import rmtdevImg from '@/public/rmtdev.png';
 import wordanalyticsImg from '@/public/wordanalytics.png';
 
-export const links = [
-  {
-    name: 'Home',
-    hash: '#home',
-  },
-  {
-    name: 'About',
-    hash: '#about',
-  },
-  {
-    name: 'Projects',
-    hash: '#projects',
-  },
-  {
-    name: 'Skills',
-    hash: '#skills',
-  },
-  {
-    name: 'Experience',
-    hash: '#experience',
-  },
-] as const;
+export const sections = ['About', 'Skills', 'Projects', 'Experience'] as const;
 
 type Experience = {
   id: string;
@@ -57,7 +36,7 @@ export const experiencesData: Experience[] = [
         </li>
       </ul>
     ),
-    icon: React.createElement(CgWorkAlt),
+    icon: <CgWorkAlt />,
     date: '2020 - 2021',
   },
   {
