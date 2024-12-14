@@ -30,7 +30,7 @@ export default function Skills() {
     <section
       id="skills"
       ref={ref}
-      className="mb-28 max-w-[53rem] scroll-mt-28 text-center sm:mb-40"
+      className="mb-28 max-w-[48rem] scroll-mt-28 text-center sm:mb-40"
     >
       <SectionHeading>My Skills 🚀</SectionHeading>
       <ul className="flex flex-wrap justify-center gap-2 text-lg text-gray-800">
@@ -44,9 +44,9 @@ export default function Skills() {
               once: true,
             }}
             custom={index}
-            className="bg-white borderBlack rounded-xl px-5 py-3 dark:bg-white/10 dark:text-white/80"
+            className="bg-white borderBlack rounded-xl px-5 py-3 dark:bg-white/10 dark:text-white/80 flex gap-x-4 justify-center items-center"
           >
-            {skill} 🌟
+            {skill.name}
           </motion.li>
         ))}
       </ul>

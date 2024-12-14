@@ -1,6 +1,6 @@
 'use client';
 
-import { BsMoon, BsSun } from 'react-icons/bs';
+import { LuMoon, LuSun } from 'react-icons/lu';
 
 import { useTheme } from '@/context/ThemeContext';
 
@@ -10,10 +10,10 @@ export default function ThemeSwitch() {
   return (
     <button
       type="button"
-      className="fixed bottom-5 right-5 bg-white w-[3rem] h-[3rem] bg-opacity-80 backdrop-blur-[0.5rem] border border-white border-opacity-40 shadow-2xl rounded-full flex items-center justify-center hover:scale-[1.15] active:scale-105 transition-all dark:bg-gray-950"
+      className="w-[2rem] h-[2rem] rounded-full flex items-center justify-center"
       onClick={toggleTheme}
     >
-      {theme === 'light' ? <BsSun /> : <BsMoon />}
+      {theme === 'light' ? <LuSun /> : <LuMoon />}
     </button>
   );
 }

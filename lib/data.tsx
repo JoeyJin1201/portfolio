@@ -154,18 +154,18 @@ export const projectsData = [
 ];
 
 export const skillsData = [
-  'HTML',
-  'CSS',
-  'JavaScript',
-  'TypeScript',
-  'React',
-  'Next.js',
-  'Node.js',
-  'Git',
-  'Tailwind',
-  'Bootstrap',
-  'Material UI',
-  'Redux',
-  'Express',
-  'Firebase',
-] as const;
+  { name: 'HTML', image: '' },
+  { name: 'CSS', image: '' },
+  { name: 'JavaScript', image: '' },
+  { name: 'TypeScript', image: '' },
+  { name: 'React', image: '' },
+  { name: 'Next.js', image: '' },
+  { name: 'Node.js', image: '' },
+  { name: 'Git', image: '' },
+  { name: 'Tailwind', image: '' },
+  { name: 'Bootstrap', image: '' },
+  { name: 'Material UI', image: '' },
+  { name: 'Redux', image: '' },
+  { name: 'Express', image: '' },
+  { name: 'Firebase', image: '' },
+];

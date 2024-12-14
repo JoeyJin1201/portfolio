@@ -53,13 +53,12 @@ export default function ThemeContextProvider({
     }
   }, []);
 
-  // 使用 useMemo 優化 value 對象
   const contextValue = useMemo(
     () => ({
       theme,
       toggleTheme,
     }),
-    [theme], // 僅當 theme 改變時重新構建對象
+    [theme],
   );
 
   return (

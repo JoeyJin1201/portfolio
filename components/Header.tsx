@@ -4,6 +4,8 @@ import clsx from 'clsx';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 
+import ThemeSwitch from '@/components/ThemeSwitch';
+
 import { useActiveSectionContext } from '@/context/ActiveSectionContext';
 
 import { links } from '@/lib/data';
@@ -59,6 +61,13 @@ export default function Header() {
               </Link>
             </motion.li>
           ))}
+          <motion.li
+            className="h-3/4 flex items-center justify-center relative"
+            initial={{ y: -100, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+          >
+            <ThemeSwitch />
+          </motion.li>
         </ul>
       </nav>
     </header>

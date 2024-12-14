@@ -4,7 +4,6 @@ import React from 'react';
 
 import Footer from '@/components/Footer';
 import Header from '@/components/Header';
-import ThemeSwitch from '@/components/ThemeSwitch';
 
 import ActiveSectionContextProvider from '@/context/ActiveSectionContext';
 import ThemeContextProvider from '@/context/ThemeContext';
@@ -33,8 +32,6 @@ export default function RootLayout({
             <Header />
             {children}
             <Footer />
-
-            <ThemeSwitch />
           </ActiveSectionContextProvider>
         </ThemeContextProvider>
       </body>
