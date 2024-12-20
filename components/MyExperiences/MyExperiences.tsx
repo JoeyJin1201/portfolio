@@ -44,7 +44,7 @@ export default function MyExperiences() {
                     : '0.4rem solid rgba(255, 255, 255, 0.5)',
               }}
               date={item.date}
-              icon={item?.icon} // Use the FaReact icon
+              icon={item.icon}
               iconStyle={{
                 background:
                   theme === 'light' ? 'white' : 'rgba(255, 255, 255, 0.15)',
@@ -54,7 +54,13 @@ export default function MyExperiences() {
               <h3 className="font-semibold capitalize">{item.title}</h3>
               <p className="font-normal !mt-0">{item.company}</p>
               <div className="!mt-1 !font-normal text-gray-700 dark:text-white/75">
-                {item.description}
+                <ul className="list-none mt-2 font-normal text-gray-700 dark:text-white/75">
+                  {item.description?.map((desc) => (
+                    <li key={uuid()} className="-indent-6 pl-6 mb-2">
+                      {desc}
+                    </li>
+                  ))}
+                </ul>
               </div>
             </VerticalTimelineElement>
           </React.Fragment>

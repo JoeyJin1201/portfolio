@@ -29,7 +29,6 @@ export default function Project({
   return (
     <motion.div
       ref={ref}
-      key={uuid()}
       className="group mb-3 sm:mb-8 last:mb-0"
       style={{
         scale: scaleProgess,

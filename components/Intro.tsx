@@ -41,10 +41,14 @@ export default function About() {
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
       >
-        <span className="font-bold">🚀 Hello World!, I'm Joey.</span> I'm a{' '}
-        <span className="font-bold">frontend developer</span>. I enjoy building{' '}
-        <span className="italic">sites & apps</span>. Let's create something
-        extraordinary! 💻✨
+        Hello World!
+        <br />
+        I'm <span className="font-bold">Joey,</span> a{' '}
+        <span className="font-bold">frontend developer</span>.
+        <br />
+        I enjoy building things.
+        <br />
+        Let's create something extraordinary! 💻✨
       </motion.h1>
     </section>
   );

@@ -31,7 +31,7 @@ export default function MySkills() {
       ref={ref}
       className="mb-28 max-w-[48rem] scroll-mt-28 text-center sm:mb-40"
     >
-      <SectionHeading>My Skills 🚀</SectionHeading>
+      <SectionHeading>My Skills 💪🏻</SectionHeading>
       <ul className="flex flex-wrap justify-center gap-2 text-lg text-gray-800">
         {skills.map((skill, index) => (
           <motion.li

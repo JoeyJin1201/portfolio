@@ -1,6 +1,6 @@
 'use client';
 
-import React from 'react';
+import { v4 as uuid } from 'uuid';
 
 import SectionHeading from '@/components/SectionHeading';
 
@@ -15,17 +15,16 @@ export default function MyProjects() {
 
   return (
     <section ref={ref} className="scroll-mt-28 mb-28">
-      <SectionHeading>My projects</SectionHeading>
-      <div>
-        {projects.map((project) => (
-          <Project
-            title={project.title}
-            description={project.description}
-            tags={project.tags}
-            imageUrl={project.imageUrl}
-          />
-        ))}
-      </div>
+      <SectionHeading>My projects 🚀</SectionHeading>
+      {projects.map((project) => (
+        <Project
+          key={uuid()}
+          title={project.title}
+          description={project.description}
+          tags={project.tags}
+          imageUrl={project.imageUrl}
+        />
+      ))}
     </section>
   );
 }
