@@ -5,27 +5,29 @@ import {
   VerticalTimeline,
   VerticalTimelineElement,
 } from 'react-vertical-timeline-component';
+import { v4 as uuid } from 'uuid';
+
+import SectionHeading from '@/components/SectionHeading';
 
 import { useTheme } from '@/context/ThemeContext';
 
-import useSectionInView from '@/hooks/useSectionInView';
-import { experiencesData } from '@/lib/data';
+import experiences from '@/data/experiences';
 
-import SectionHeading from './SectionHeading';
+import useSectionInView from '@/hooks/useSectionInView';
 
 import 'react-vertical-timeline-component/style.min.css';
 
-export default function Experience() {
-  const { ref } = useSectionInView('Experience');
+export default function MyExperiences() {
+  const { ref } = useSectionInView('Experiences');
 
   const { theme } = useTheme();
 
   return (
     <section ref={ref} className="scroll-mt-28 mb-28 sm:mb-40">
-      <SectionHeading>My Experience 🌟</SectionHeading>
+      <SectionHeading>My Experiences 🌟</SectionHeading>
       <VerticalTimeline lineColor="">
-        {experiencesData.map((item) => (
-          <React.Fragment key={item.id}>
+        {experiences.map((item) => (
+          <React.Fragment key={uuid()}>
             <VerticalTimelineElement
               contentStyle={{
                 background:

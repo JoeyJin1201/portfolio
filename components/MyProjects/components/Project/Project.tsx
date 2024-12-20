@@ -6,7 +6,6 @@ import { useRef } from 'react';
 import { v4 as uuid } from 'uuid';
 
 type ProjectProps = {
-  id: string;
   title: string;
   description: string;
   tags: string[];
@@ -14,7 +13,6 @@ type ProjectProps = {
 };
 
 export default function Project({
-  id,
   title,
   description,
   tags,
@@ -31,7 +29,7 @@ export default function Project({
   return (
     <motion.div
       ref={ref}
-      key={id}
+      key={uuid()}
       className="group mb-3 sm:mb-8 last:mb-0"
       style={{
         scale: scaleProgess,

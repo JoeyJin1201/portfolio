@@ -2,16 +2,8 @@ import React from 'react';
 import { CgWorkAlt } from 'react-icons/cg';
 import { FaReact } from 'react-icons/fa';
 import { SiNextdotjs } from 'react-icons/si';
-import { v4 as uuid } from 'uuid';
-
-import corpcommentImg from '@/public/corpcomment.png';
-import rmtdevImg from '@/public/rmtdev.png';
-import wordanalyticsImg from '@/public/wordanalytics.png';
-
-export const sections = ['About', 'Skills', 'Projects', 'Experience'] as const;
 
 type Experience = {
-  id: string;
   title: string;
   company: string;
   description: React.ReactNode;
@@ -19,9 +11,8 @@ type Experience = {
   date: string;
 };
 
-export const experiencesData: Experience[] = [
+export default [
   {
-    id: uuid(),
     title: 'Web Developer Trainee',
     company: 'Innovex Academy, Bhubaneswar, India',
     description: (
@@ -37,10 +28,9 @@ export const experiencesData: Experience[] = [
       </ul>
     ),
     icon: <CgWorkAlt />,
-    date: '2020 - 2021',
+    date: '2019 - 2020',
   },
   {
-    id: uuid(),
     title: 'Software Developer II',
     company: 'SearchingYard Software Pvt. Ltd., Bhubaneswar, India',
     description: (
@@ -70,10 +60,9 @@ export const experiencesData: Experience[] = [
       </ul>
     ),
     icon: <FaReact />,
-    date: '2021 - 2024',
+    date: '2020 - 2022',
   },
   {
-    id: uuid(),
     title: 'Next.js Developer',
     company: 'AIS Technolabs Pvt Ltd, Ahemadabad, India',
     description: (
@@ -101,61 +90,6 @@ export const experiencesData: Experience[] = [
       </ul>
     ),
     icon: <SiNextdotjs />,
-    date: '2024 - Present',
+    date: '2022 - Present',
   },
-];
-
-export const projectsData = [
-  {
-    id: uuid(),
-    title: 'CorpComment',
-    description:
-      'I worked as a full-stack developer on this startup project for 2 years. Users can give public feedback to companies.',
-    tags: ['React', 'Next.js', 'MongoDB', 'Tailwind', 'Prisma'],
-    imageUrl: corpcommentImg,
-  },
-  {
-    id: uuid(),
-    title: 'rmtDev',
-    description:
-      'Job board for remote developer jobs. I was the front-end developer. It has features like filtering, sorting and pagination.',
-    tags: ['React', 'TypeScript', 'Next.js', 'Tailwind', 'Redux'],
-    imageUrl: rmtdevImg,
-  },
-  {
-    id: uuid(),
-    title: 'Word Analytics',
-    description:
-      'A public web app for quick analytics on text. It shows word count, character count and social media post limits.',
-    tags: ['React', 'Next.js', 'SQL', 'Tailwind', 'Framer'],
-    imageUrl: wordanalyticsImg,
-  },
-];
-
-export const skillsData = [
-  { name: 'HTML', image: '/html5/html5-original.svg' },
-  { name: 'CSS', image: '/css3/css3-original.svg' },
-  { name: 'JavaScript', image: '/javascript/javascript-original.svg' },
-  { name: 'TypeScript', image: '/typescript/typescript-original.svg' },
-  { name: 'React', image: '/react/react-original.svg' },
-  { name: 'Next.js', image: '/nextjs/nextjs-original.svg' },
-  { name: 'Redux', image: '/redux/redux-original.svg' },
-  { name: 'Node.js', image: '/nodejs/nodejs-plain-wordmark.svg' },
-  { name: 'Git', image: '/git/git-original.svg' },
-  { name: 'Antd', image: '/antdesign/antdesign-original.svg' },
-  { name: 'Tailwind', image: '/tailwindcss/tailwindcss-original.svg' },
-  { name: 'Material UI', image: '/materialui/materialui-original.svg' },
-  { name: 'Bootstrap', image: '/bootstrap/bootstrap-original.svg' },
-  { name: 'Docker', image: '/docker/docker-original.svg' },
-  { name: 'Babel', image: '/babel/babel-original.svg' },
-  { name: 'Cypress', image: '/cypressio/cypressio-original.svg' },
-  { name: 'ESLint', image: '/eslint/eslint-original.svg' },
-  { name: 'less', image: '/less/less-plain-wordmark.svg' },
-  { name: 'Nuxtjs', image: '/nuxtjs/nuxtjs-original.svg' },
-  { name: 'sass', image: '/sass/sass-original.svg' },
-  { name: 'reactrouter', image: '/reactrouter/reactrouter-original.svg' },
-  { name: 'vuejs', image: '/vuejs/vuejs-original.svg' },
-  { name: 'vuetify', image: '/vuetify/vuetify-original.svg' },
-  { name: 'webpack', image: '/webpack/webpack-original.svg' },
-  { name: 'yarn', image: '/yarn/yarn-original.svg' },
-];
+] as Experience[];

@@ -6,9 +6,10 @@ import ThemeSwitch from '@/components/ThemeSwitch';
 
 import { useActiveSectionContext } from '@/context/ActiveSectionContext';
 
+import sections from '@/data/sections';
+
 import { getGlobalRefs } from '@/hooks/useSectionInView';
 
-import { sections } from '@/lib/data';
 import { SectionName } from '@/lib/types';
 
 export default function Header() {

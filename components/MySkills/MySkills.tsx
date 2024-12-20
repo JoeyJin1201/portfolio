@@ -3,11 +3,11 @@
 import { motion } from 'framer-motion';
 import { v4 as uuid } from 'uuid';
 
+import SectionHeading from '@/components/SectionHeading';
+
+import skills from '@/data/skills';
+
 import useSectionInView from '@/hooks/useSectionInView';
-
-import { skillsData } from '@/lib/data';
-
-import SectionHeading from './SectionHeading';
 
 const fadeInAnimationVariants = {
   initial: {
@@ -23,7 +23,7 @@ const fadeInAnimationVariants = {
   }),
 };
 
-export default function Skills() {
+export default function MySkills() {
   const { ref } = useSectionInView('Skills');
 
   return (
@@ -33,7 +33,7 @@ export default function Skills() {
     >
       <SectionHeading>My Skills 🚀</SectionHeading>
       <ul className="flex flex-wrap justify-center gap-2 text-lg text-gray-800">
-        {skillsData.map((skill, index) => (
+        {skills.map((skill, index) => (
           <motion.li
             key={uuid()}
             variants={fadeInAnimationVariants}
@@ -43,7 +43,7 @@ export default function Skills() {
               once: true,
             }}
             custom={index}
-            className="bg-white borderBlack rounded-xl px-3 py-3 dark:bg-white/10 dark:text-white/80 flex gap-x-4 justify-center items-center"
+            className="bg-white borderBlack rounded-xl px-3 py-3 dark:bg-white/10 dark:text-white/80 flex gap-x-2 justify-center items-center"
           >
             <img
               src={`https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons${skill.image}`}
