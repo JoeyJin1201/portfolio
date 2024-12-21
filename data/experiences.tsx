@@ -1,6 +1,5 @@
 import React from 'react';
-import { FaReact, FaVuejs } from 'react-icons/fa';
-import { RiBatteryChargeLine } from 'react-icons/ri';
+import { FaBoltLightning, FaReact, FaVuejs } from 'react-icons/fa6';
 
 type Experience = {
   title: string;
@@ -21,7 +20,7 @@ export default [
       '透過 GitHub Pull Request 與團隊協作，實現版本控制與功能維護，持續提升開發效率與代碼品質。',
       '持續學習業界前沿技術，累積實務經驗，致力於成為企業需求的即戰力，為專案貢獻價值。',
     ],
-    icon: <RiBatteryChargeLine />,
+    icon: <FaBoltLightning />,
     date: '2019 - 2020',
   },
   {

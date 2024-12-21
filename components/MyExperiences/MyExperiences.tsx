@@ -33,7 +33,7 @@ export default function MyExperiences() {
             key={uuid()}
             contentStyle={{
               background:
-                theme === 'light' ? '#f3f4f6' : 'rgba(255, 255, 255, 0.05)',
+                theme === 'light' ? '#f3f4f5' : 'rgba(255, 255, 255, 0.05)',
               boxShadow: 'none',
               border: '1px solid rgba(0, 0, 0, 0.05)',
               textAlign: 'left',
@@ -50,7 +50,6 @@ export default function MyExperiences() {
             iconStyle={{
               background:
                 theme === 'light' ? 'white' : 'rgba(255, 255, 255, 0.15)',
-              fontSize: '1.5rem',
             }}
           >
             <h3 className="text-xl font-semibold text-center capitalize">
@@ -61,7 +60,7 @@ export default function MyExperiences() {
             </p>
             <div className="!mt-2 font-normal text-gray-700 dark:text-white/75">
               <ul className="list-disc pl-4 mt-2 font-normal text-gray-700 dark:text-white/75">
-                {item.description?.map((desc) => (
+                {item.description.map((desc) => (
                   <li key={uuid()} className="mb-2 text-justify">
                     {desc}
                   </li>
