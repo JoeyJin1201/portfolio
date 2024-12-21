@@ -10,7 +10,7 @@ const globalRefs: Record<string, HTMLDivElement | null> = {};
 
 export const getGlobalRefs = () => globalRefs; // 提供外部訪問的接口
 
-const useSectionInView = (sectionName: SectionName, threshold = 0.25) => {
+const useSectionInView = (sectionName: SectionName, threshold = 0.05) => {
   const { ref: inViewRef, inView } = useInView({
     threshold,
   });
