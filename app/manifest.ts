@@ -1,12 +1,6 @@
-'use client';
-
 import type { MetadataRoute } from 'next';
 
-import { useTheme } from '@/context/ThemeContext';
-
 export default function Manifest(): MetadataRoute.Manifest {
-  const { theme } = useTheme();
-
   return {
     name: "Joey's Portfolio",
     short_name: 'JoeyPortfolio',
@@ -24,8 +18,6 @@ export default function Manifest(): MetadataRoute.Manifest {
         purpose: 'maskable',
       },
     ],
-    theme_color: theme === 'light' ? '#F9FAFB' : '#111827',
-    background_color: theme === 'light' ? '#F9FAFB' : '#111827',
     display: 'standalone',
   };
 }
