@@ -14,7 +14,7 @@ const ubuntuMono = Ubuntu_Mono({ weight: '400', subsets: ['latin'] });
 
 export const metadata = {
   title: 'Joey | Personal Portfolio',
-  description: 'Joey is a front-end developer with 3 years of experience.',
+  description: 'Joey is a front-end developer',
 };
 
 export default function RootLayout({

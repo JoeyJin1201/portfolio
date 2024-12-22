@@ -22,10 +22,7 @@ export default function MyExperiences() {
   const { theme } = useTheme();
 
   return (
-    <section
-      ref={ref}
-      className="max-w-[64em] w-[100%] scroll-mt-12 mb-12 sm:mb-24"
-    >
+    <section ref={ref} className="max-w-[64em] w-[100%] scroll-mt-28 mb-28">
       <SectionHeading>My Experiences 🌟</SectionHeading>
       <VerticalTimeline lineColor="">
         {experiences.map((item) => (
