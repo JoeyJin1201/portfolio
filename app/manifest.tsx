@@ -1,3 +1,5 @@
+'use client';
+
 import type { MetadataRoute } from 'next';
 
 import { useTheme } from '@/context/ThemeContext';
