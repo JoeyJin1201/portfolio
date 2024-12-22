@@ -1,8 +1,11 @@
 import ecoImg from '@/public/eco.png';
+import fitImg from '@/public/fit.png';
 import grasImg from '@/public/gras.png';
 import grwImg from '@/public/grw.png';
 import jmmImg from '@/public/jmm.png';
 import jobsImg from '@/public/jobs.png';
+import secretImg from '@/public/secret.webp';
+import whImg from '@/public/wh.png';
 
 export default [
   {
@@ -11,6 +14,27 @@ export default [
       '清潔服務網站，提供流暢的使用者體驗與 SEO 優化，並以簡潔響應式設計展現前端技術應用。',
     tags: ['Nuxtjs', 'Vuex', 'Tailwind CSS', 'SEO'],
     imageUrl: jmmImg,
+  },
+  {
+    title: 'Halt Parking',
+    description:
+      '智能停車柱管理系統，重構原有 VM 架構為 Nginx 和 Docker Compose 解決方案，大幅提升系統穩定性並降低維運成本。',
+    tags: ['Vue', 'Nginx', 'Docker Compose'],
+    imageUrl: secretImg,
+  },
+  {
+    title: 'White Horse',
+    description:
+      'AR 應用支援戲劇展演，透過 Vue 整合 AR SDK 基於 GPS 座標呈現模型，解決跨平台裝置的兼容性挑戰，並確保系統穩定運行。',
+    tags: ['Vue', 'AR SDK', 'GPS', 'Docker Compose', 'AWS ECS'],
+    imageUrl: whImg,
+  },
+  {
+    title: 'FitGlasses',
+    description:
+      '線上 AR 眼鏡試戴系統，採用 Nuxt.js 提升 SEO 與使用者體驗，並以 Docker Compose 部署於 AWS ECS，確保兼容性與高性能。',
+    tags: ['Nuxt.js', 'SSR', 'Docker Compose', 'AWS ECS', 'AR'],
+    imageUrl: fitImg,
   },
   {
     title: 'HRrecruit',
