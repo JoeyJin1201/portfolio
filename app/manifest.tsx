@@ -1,6 +1,10 @@
 import type { MetadataRoute } from 'next';
 
-export default function manifest(): MetadataRoute.Manifest {
+import { useTheme } from '@/context/ThemeContext';
+
+export default function Manifest(): MetadataRoute.Manifest {
+  const { theme } = useTheme();
+
   return {
     name: "Joey's Portfolio",
     short_name: 'JoeyPortfolio',
@@ -18,8 +22,8 @@ export default function manifest(): MetadataRoute.Manifest {
         purpose: 'maskable',
       },
     ],
-    theme_color: '#ffffff',
-    background_color: '#ffffff',
+    theme_color: theme === 'light' ? '#F9FAFB' : '#111827',
+    background_color: theme === 'light' ? '#F9FAFB' : '#111827',
     display: 'standalone',
   };
 }
