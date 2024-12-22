@@ -10,10 +10,7 @@
   },
   "dependencies": {
     "@eslint/eslintrc": "^3.2.0",
-    "@react-email/components": "^0.0.7",
-    "@react-email/tailwind": "^0.0.8",
     "autoprefixer": "10.4.14",
-    "clsx": "^1.2.1",
     "framer-motion": "^11.14.4",
     "next": "15.1.0",
     "react": "18.2.0",
@@ -28,7 +25,6 @@
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "@types/react-vertical-timeline-component": "^3.3.6",
-    "@types/tailwindcss": "^3.1.0",
     "@types/uuid": "^10.0.0",
     "eslint": "^9",
     "eslint-config-airbnb": "^19.0.4",
