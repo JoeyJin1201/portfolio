@@ -29,10 +29,10 @@ export default function MySkills() {
   return (
     <section
       ref={ref}
-      className="mb-28 max-w-[48rem] scroll-mt-28 text-center sm:mb-40"
+      className="mb-28 max-w-[48rem] scroll-mt-28 text-center sm:mb-56"
     >
       <SectionHeading>My Skills 🛠️</SectionHeading>
-      <ul className="flex flex-wrap justify-center gap-2 text-lg text-gray-800">
+      <ul className="flex flex-wrap justify-center gap-2 text-lg text-gray-800 sm:gap-6">
         {skills.map((skill, index) => (
           <motion.li
             key={uuid()}
