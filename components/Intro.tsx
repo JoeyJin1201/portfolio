@@ -1,17 +1,22 @@
+/* eslint-disable react/no-unstable-nested-components */
+
 'use client';
 
 import { motion } from 'framer-motion';
+import { useTranslations } from 'next-intl';
 import Image from 'next/image';
 
 import useSectionInView from '@/hooks/useSectionInView';
 
 export default function About() {
+  const t = useTranslations('INTRO');
+
   const { ref } = useSectionInView('About');
 
   return (
     <section
       ref={ref}
-      className="mb-28 max-w-[50rem] text-center sm:mb-0 scroll-mt-[100rem]"
+      className="mb-28 max-w-[50rem] text-center sm:mb-0 scroll-mt-[100rem] pt-28 sm:pt-36"
     >
       <div className="flex items-center justify-center">
         <div className="relative">
@@ -41,19 +46,10 @@ export default function About() {
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
       >
-        <span>Hello World!</span>
-        <br />
-        <span>
-          I'm <span className="font-bold">Joey,</span>
-        </span>
-        <br />
-        <span>
-          a <span className="font-bold">frontend developer</span>.
-        </span>
-        <br />
-        <span>I enjoy building things.</span>
-        <br />
-        <span>Let's create something extraordinary! 💻✨</span>
+        {t.rich('SELF', {
+          br: () => <br />,
+          strong: (children) => <strong>{children}</strong>,
+        })}
       </motion.h1>
     </section>
   );

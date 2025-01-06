@@ -13,6 +13,7 @@
     "autoprefixer": "^10",
     "framer-motion": "^11",
     "next": "^15",
+    "next-intl": "^3.26.3",
     "react": "^19",
     "react-dom": "^19",
     "react-icons": "^5",
