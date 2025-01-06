@@ -1,6 +1,7 @@
 'use client';
 
 import { v4 as uuid } from 'uuid';
+import { useTranslations } from 'next-intl';
 
 import SectionHeading from '@/components/SectionHeading';
 
@@ -11,6 +12,8 @@ import useSectionInView from '@/hooks/useSectionInView';
 import Project from './components/Project/Project';
 
 export default function MyProjects() {
+  const t = useTranslations('PROJECTS');
+
   const { ref } = useSectionInView('Projects');
 
   return (
@@ -20,7 +23,7 @@ export default function MyProjects() {
         <Project
           key={uuid()}
           title={project.title}
-          description={project.description}
+          description={t(project.description)}
           tags={project.tags}
           imageUrl={project.imageUrl}
         />

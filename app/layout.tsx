@@ -1,6 +1,6 @@
 /* eslint-disable camelcase */
 import { NextIntlClientProvider } from 'next-intl';
-import { getMessages } from 'next-intl/server';
+import { getLocale, getMessages } from 'next-intl/server';
 import { Ubuntu_Mono } from 'next/font/google';
 import React from 'react';
 
@@ -10,15 +10,9 @@ import Header from '@/components/Header';
 import ActiveSectionContextProvider from '@/context/ActiveSectionContext';
 import ThemeContextProvider from '@/context/ThemeContext';
 
-import { routing } from '@/i18n/routing';
-
 import './globals.css';
 
 const ubuntuMono = Ubuntu_Mono({ weight: '400', subsets: ['latin'] });
-
-export function generateStaticParams() {
-  return routing.locales.map((locale) => ({ locale }));
-}
 
 export const metadata = {
   title: 'Joey | Personal Portfolio',
@@ -27,11 +21,10 @@ export const metadata = {
 
 export default async function RootLayout({
   children,
-  params: { locale },
 }: {
   children: React.ReactNode;
-  params: { locale: string };
 }) {
+  const locale = await getLocale();
   const messages = await getMessages();
 
   return (

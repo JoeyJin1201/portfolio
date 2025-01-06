@@ -1,7 +1,6 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { v4 as uuid } from 'uuid';
 
 import SectionHeading from '@/components/SectionHeading';
 
@@ -29,19 +28,16 @@ export default function MySkills() {
   return (
     <section
       ref={ref}
-      className="mb-28 max-w-[48rem] scroll-mt-28 text-center sm:mb-56"
+      className="mb-28 max-w-[48rem] scroll-mt-28 text-center sm:pt-8 sm:pb-16"
     >
       <SectionHeading>My Skills 🛠️</SectionHeading>
       <ul className="flex flex-wrap justify-center gap-2 text-lg text-gray-800 sm:gap-6">
         {skills.map((skill, index) => (
           <motion.li
-            key={uuid()}
+            key={skill.name}
             variants={fadeInAnimationVariants}
             initial="initial"
             whileInView="animate"
-            viewport={{
-              once: true,
-            }}
             custom={index}
             className="bg-white borderBlack rounded-xl px-3 py-3 dark:bg-white/10 dark:text-white/80 flex gap-x-2 justify-center items-center"
           >

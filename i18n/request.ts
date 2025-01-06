@@ -1,18 +1,12 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
 import { getRequestConfig } from 'next-intl/server';
-import { routing } from './routing';
 
-export default getRequestConfig(async ({ requestLocale }) => {
-  // This typically corresponds to the `[locale]` segment
-  let locale = await requestLocale;
+import {getUserLocale} from '@/services/locale';
 
-  // Ensure that a valid locale is used
-  if (!locale || !routing.locales.includes(locale as any)) {
-    locale = routing.defaultLocale;
-  }
+export default getRequestConfig(async () => {
+  const locale = await getUserLocale();
 
   return {
     locale,
-    messages: (await import(`@/i18n/${locale}/translation.json`)).default,
+    messages: (await import(`@/i18n/messages/${locale}.json`)).default,
   };
 });

@@ -16,7 +16,7 @@ export default function About() {
   return (
     <section
       ref={ref}
-      className="mb-28 max-w-[50rem] text-center sm:mb-0 scroll-mt-[100rem] pt-28 sm:pt-36"
+      className="mb-28 max-w-[50rem] text-center sm:mb-0 scroll-mt-[100rem] pt-32 sm:pt-48"
     >
       <div className="flex items-center justify-center">
         <div className="relative">
@@ -46,10 +46,12 @@ export default function About() {
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
       >
-        {t.rich('SELF', {
-          br: () => <br />,
-          strong: (children) => <strong>{children}</strong>,
-        })}
+        <span className="font-normal">
+          {t.rich('SELF', {
+            br: () => <br />,
+            strong: (children) => <strong>{children}</strong>,
+          })}
+        </span>
       </motion.h1>
     </section>
   );

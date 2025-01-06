@@ -1,0 +1,43 @@
+{
+  "INTRO": {
+    "SELF": "Hello World!<br></br><br></br>I'm <strong>Joey</strong>,<br></br>a <strong>frontend engineer</strong>.<br></br>I enjoy building things.<br></br>Let's create something extraordinary! 💻✨"
+  },
+  "PROJECTS": {
+    "JMM": "A cleaning service website that provides a seamless user experience and SEO optimization, showcasing frontend expertise through responsive and minimalist design.",
+    "HP": "An intelligent parking post management system, restructured from a VM-based architecture to a Nginx and Docker Compose solution, significantly enhancing system stability and reducing operational costs.",
+    "WH": "An AR application supporting theatrical performances, integrated with AR SDK using Vue and GPS coordinates to render models, resolving cross-platform compatibility challenges and ensuring system stability.",
+    "FG": "An online AR glasses try-on system built with Nuxt.js for enhanced SEO and user experience, deployed on AWS ECS with Docker Compose to ensure compatibility and high performance.",
+    "HRR": "A recruitment platform emphasizing intuitive interface design and efficient state management, showcasing the practical application of frontend technologies in real-world projects.",
+    "HREC": "An internal recruitment website focused on efficient talent management workflows and a user-friendly interface, demonstrating the use of frontend technology in internal systems.",
+    "GRW": "A global recruitment website prioritizing SEO optimization and efficient interface design, highlighting extensive experience with modern frontend technologies.",
+    "GRAS": "An internal compliance system featuring interactive charts and a user-friendly interface, showcasing expertise in data visualization and frontend technology."
+  },
+  "EXPERIENCES": {
+    "HS": {
+      "company": "Hex School",
+      "desc0": "Developed responsive web pages using HTML, CSS, Vue, and Bootstrap, ensuring optimal user experience across various devices and resolutions.",
+      "desc1": "Participated in government open API integration, developing single-page applications (SPAs) such as a mask map and air quality monitoring tools to address daily needs and enhance usability.",
+      "desc2": "Collaborated with enterprises to develop corporate websites, enhancing users' understanding of brand information and services.",
+      "desc3": "Utilized GitHub Pull Requests for team collaboration, implementing version control and feature maintenance to improve development efficiency and code quality.",
+      "desc4": "Continuously learned cutting-edge industry technologies, accumulated practical experience, and contributed to projects as an immediate value provider."
+    },
+    "YJ": {
+      "company": "Yajan Tech. Co., Ltd.",
+      "desc0": "Collaborated with a US-based team to develop an intelligent parking post management system using Vue, leading the migration from a VM-based architecture to a Nginx and Docker Compose solution, significantly improving system stability and reducing operational costs.",
+      "desc1": "Developed an AR application supporting theatrical performances at the National Taichung Theater for Feng Chia University Drama Club. Integrated AR SDK with Vue and rendered models based on GPS coordinates, addressing cross-platform compatibility challenges related to GPS permissions and camera access. Deployed the system on AWS ECS for stable operation.",
+      "desc2": "Collaborated with a Hong Kong-based team to develop an online AR glasses try-on system using Nuxt.js for server-side rendering (SSR), enhancing SEO and user experience. Utilized Docker Compose for deployment on AWS ECS, ensuring compatibility and performance.",
+      "desc3": "Successfully resolved multiple cross-platform technical challenges in AR applications, significantly improving system stability and compatibility.",
+      "desc4": "Leveraged Docker technology to enhance deployment efficiency, reduce operational costs, and accelerate team development progress."
+    },
+    "WT": {
+      "company": "Wistron Corporation",
+      "desc0": "Led project technical transformation using React, Next.js, styled-components, and Ant Design to create efficient and intuitive web applications.",
+      "desc1": "Developed the HR campus recruitment website, recruitment approval management system, overseas recruitment website, and Wistron global compliance system, while enhancing project cybersecurity standards.",
+      "desc2": "Served as the frontend team lead, conducting interviews, managing the frontend team, and performing code reviews to ensure code quality and team efficiency.",
+      "desc3": "Integrated the company's LLM and intelligent knowledge base, promoting and assisting in the adoption of the ColumbusAI assistant, significantly boosting project efficiency across departments.",
+      "desc4": "Implemented CI/CD pipelines on GitLab to automate Jest testing and ESLint checks, and deployed projects on Azure AKS using ArgoCD, ensuring efficient and stable application operation.",
+      "desc5": "Managed Scrum projects with Jira, closely collaborating with the PO and development team to meet requirements and timelines.",
+      "desc6": "Explored and introduced Next.js during personal time, designing a frontend starter kit that helped various departments accelerate project initialization, significantly reducing development time and costs."
+    }
+  }
+}

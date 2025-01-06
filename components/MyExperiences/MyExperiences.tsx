@@ -4,7 +4,7 @@ import {
   VerticalTimeline,
   VerticalTimelineElement,
 } from 'react-vertical-timeline-component';
-import { v4 as uuid } from 'uuid';
+import { useTranslations } from 'next-intl';
 
 import SectionHeading from '@/components/SectionHeading';
 
@@ -17,6 +17,8 @@ import useSectionInView from '@/hooks/useSectionInView';
 import 'react-vertical-timeline-component/style.min.css';
 
 export default function MyExperiences() {
+  const t = useTranslations('EXPERIENCES');
+
   const { ref } = useSectionInView('Experiences');
 
   const { theme } = useTheme();
@@ -25,9 +27,9 @@ export default function MyExperiences() {
     <section ref={ref} className="max-w-[64em] w-[100%] scroll-mt-28 mb-28">
       <SectionHeading>My Experiences 🌟</SectionHeading>
       <VerticalTimeline lineColor="">
-        {experiences.map((item) => (
+        {experiences.map((experience) => (
           <VerticalTimelineElement
-            key={uuid()}
+            key={experience.company}
             contentStyle={{
               background:
                 theme === 'light' ? '#f3f4f5' : 'rgba(255, 255, 255, 0.05)',
@@ -42,24 +44,27 @@ export default function MyExperiences() {
                   ? '0.4rem solid #9ca3af'
                   : '0.4rem solid rgba(255, 255, 255, 0.5)',
             }}
-            date={item.date}
-            icon={item.icon}
+            date={experience.date}
+            icon={experience.icon}
             iconStyle={{
               background:
                 theme === 'light' ? 'white' : 'rgba(255, 255, 255, 0.15)',
             }}
           >
             <h3 className="text-xl font-semibold text-center capitalize">
-              {item.title}
+              {experience.title}
             </h3>
             <p className="text-lg font-normal text-center !mt-0">
-              {item.company}
+              {t(`${experience.company}.company`)}
             </p>
             <div className="!mt-2 font-normal text-gray-700 dark:text-white/75">
               <ul className="list-disc pl-4 mt-2 font-normal text-gray-700 dark:text-white/75">
-                {item.description.map((desc) => (
-                  <li key={uuid()} className="mb-2 text-justify">
-                    {desc}
+                {experience.description.map((desc) => (
+                  <li
+                    key={`${experience}-${desc}`}
+                    className="mb-2 text-justify break-all"
+                  >
+                    {t(`${experience.company}.${desc}`)}
                   </li>
                 ))}
               </ul>
